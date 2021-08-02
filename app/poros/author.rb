@@ -7,4 +7,8 @@ class Author
     @lines = attrs[:lines]
     @linecount = attrs[:linecount]
   end
+
+  def poem_lines
+    @lines.join(" ")
+  end
 end

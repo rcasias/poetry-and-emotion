@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe 'PoetryFacade' do
   it 'it should call facade and retrieve seach results' do
-    author_name = "Adam%20Lindsay%20Gordon"
+    author_name = "Adam Lindsay Gordon"
     result = PoetryFacade.author_search(author_name)
 
 

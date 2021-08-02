@@ -4,6 +4,5 @@ class PoetryFacade
     data.map do |attrs|
       Author.new(attrs)
     end
-    # binding.p
   end
 end
