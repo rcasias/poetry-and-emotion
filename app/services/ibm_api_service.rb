@@ -16,8 +16,5 @@ class IbmApiService
       conn.basic_auth('apikey', ENV['IBM_API_KEY'])
     end
   end
-
-
+  
 end
-
-# https://api.us-south.tone-analyzer.watson.cloud.ibm.com/instances/f7a8d152-93c5-4c8f-ad5f-5b5a4fe172fe

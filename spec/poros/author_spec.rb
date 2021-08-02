@@ -1,8 +1,8 @@
 require 'rails_helper'
 
 describe 'Author' do
-  it 'reads' do
-    first = {
+  before :each do
+    @first = {
               "title": "A Song of Autumn",
               "author": "Adam Lindsay Gordon",
               "lines": [
@@ -25,11 +25,20 @@ describe 'Author' do
               ],
               "linecount": "16"
               }
-    content = Author.new(first)
+  end
+
+  it 'can sort through hash' do
+    content = Author.new(@first)
 
     expect(content.title).to eq "A Song of Autumn"
     expect(content.author).to eq "Adam Lindsay Gordon"
     expect(content.lines[0]).to eq "‘WHERE shall we go for our garlands glad"
-    expect(content.linecount).to eq "16"     
+    expect(content.linecount).to eq "16"
+  end
+
+  it 'can join poem_lines' do
+    poem = ("WHERE shall we go for our garlands glad At the falling of the year, When the burnt-up banks are yellow and sad,")
+    content = Author.new(@first)
+    expect(content.poem_lines.include?(poem)).to eq(true)
   end
 end

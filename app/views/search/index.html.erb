@@ -2,5 +2,6 @@
   <h2><%= poem.title %></h2>
   <h4><%= poem.author %></h4>
   <p><%= poem.poem_lines %></p>
-  <h5><%= @tones.tone %></h5>
+  <h5><%= @tone_array[0].tone %></h5>
+  <% @tone_array.shift %>
 <% end %>
