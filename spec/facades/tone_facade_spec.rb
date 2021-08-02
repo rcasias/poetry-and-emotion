@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe 'ToneFacade' do
-  it 'it should call facade and retrieve seach results' do
+  it 'it should call facade and retrieve results' do
     text = "Defrauded I a Butterfly -- The lawful Heir -- for Thee --"
     result = ToneFacade.tone(text)
 

@@ -1,10 +1,9 @@
 require 'rails_helper'
 
 describe 'PoetryFacade' do
-  it 'it should call facade and retrieve seach results' do
+  it 'it should call facade and retrieve search results' do
     author_name = "Adam Lindsay Gordon"
     result = PoetryFacade.author_search(author_name)
-
 
     expect(result).to be_an Array
     first_author = result.first
